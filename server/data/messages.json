@@ -3,35 +3,5 @@
     "id": "SJKhIAKYB",
     "from": "system",
     "text": "Welcome!"
-  },
-  {
-    "id": "Skhojf5ou",
-    "from": "bob",
-    "text": "hi"
-  },
-  {
-    "id": "Bksr3M9i_",
-    "from": "alice",
-    "text": "hello"
-  },
-  {
-    "id": "ryTKlQqsO",
-    "from": "bob",
-    "text": "Hey all"
-  },
-  {
-    "id": "B1aZQXqou",
-    "from": "bob",
-    "text": "Hi"
-  },
-  {
-    "id": "rJwSuX5iu",
-    "from": "bob",
-    "text": "blabla"
-  },
-  {
-    "id": "H1M8Omqju",
-    "from": "alice",
-    "text": "aaaa"
   }
 ]
