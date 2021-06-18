@@ -13,5 +13,10 @@
     "id": "Bksr3M9i_",
     "from": "alice",
     "text": "hello"
+  },
+  {
+    "id": "ryTKlQqsO",
+    "from": "bob",
+    "text": "Hey all"
   }
 ]
