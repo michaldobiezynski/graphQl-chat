@@ -34,8 +34,8 @@ const wsLink = new WebSocketLink({
 function isSubscription(operation) {
   const definition = getMainDefinition(operation.query);
   return (
-    definition.kind == "OperationDefinition" &&
-    definition.operation == "subscription"
+    definition.kind === "OperationDefinition" &&
+    definition.operation === "subscription"
   );
 }
 
