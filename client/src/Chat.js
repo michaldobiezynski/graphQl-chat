@@ -8,35 +8,19 @@ import {
   messageAddedSubscription,
 } from "./graphql/queries";
 
+import { useChatMessages } from "./hooks";
+
 const Chat = ({ user }) => {
   // const [messages, setMessages] = useState([]);
 
-  const { data } = useQuery(messagesQuery);
+  const { messages, addMessage } = useChatMessages();
 
-  const messages = data ? data.messages : [];
-  useSubscription(messageAddedSubscription, {
-    onSubscriptionData: ({ client, subscriptionData }) => {
-      console.log("{subscriptionData}", subscriptionData.data.messageAdded);
-      // setMessages(messages.concat(subscriptionData.data.messageAdded));
-      client.writeData({
-        data: {
-          messages: messages.concat(subscriptionData.data.messageAdded),
-        },
-      });
-    },
-  });
-  const [addMessgae] = useMutation(addMessageMutation);
-
-  const handleSend = async (text) => {
-    const { data } = await addMessgae({ variables: { input: { text } } });
-    console.log(data);
-  };
   return (
     <section className="section">
       <div className="container">
         <h1 className="title">Chatting as {user}</h1>
         <MessageList user={user} messages={messages} />
-        <MessageInput onSend={handleSend} />
+        <MessageInput onSend={addMessage} />
       </div>
     </section>
   );
